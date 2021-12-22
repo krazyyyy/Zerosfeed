@@ -1,0 +1,334 @@
+{% load static %}
+<div class="jeg_header_wrapper">
+    <div class="jeg_header_instagram_wrapper"></div>
+    <div class="jeg_header normal">
+      
+        <div class="jeg_midbar jeg_container normal">
+            <div class="container">
+                <div class="jeg_nav_row">
+                    
+                    <div class="jeg_nav_col jeg_nav_center jeg_nav_normal">
+                        <div class="item_wrap jeg_nav_aligncenter">
+                            <div class="jeg_nav_item jeg_logo jeg_desktop_logo">
+                                <h1 class="site-title"> <a href="{% url 'index' %}" style="padding: 0 0 0 0;"> <img
+                                            class="jeg_logo_img" src="{% static 'frontend/images/main_logo.png' %}"
+                                            srcset="{% static 'frontend/images/main_logo.png' %} 1x, {% static 'frontend/images/main_logo.png' %} 2x"
+                                            alt="ZerosFeed"
+                                            data-light-src="{% static 'frontend/images/main_logo.png' %}"
+                                            data-light-srcset="{% static 'frontend/images/main_logo.png' %} 1x, {% static 'frontend/images/main_logo.png' %} 2x"
+                                            data-dark-src="{% static 'frontend/images/main_logo.png' %}"
+                                            data-dark-srcset="{% static 'frontend/images/main_logo.png' %} 1x, {% static 'frontend/images/main_logo.png' %} 2x"><span
+                                            style="border:0;padding:0;margin:0;position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px);-webkit-clip-path:inset(50%);clip-path:inset(50%);white-space:nowrap">Newspaper</span>
+                                    </a></h1>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+        <div
+            class="jeg_bottombar jeg_navbar jeg_container jeg_navbar_wrapper 1 jeg_navbar_boxed jeg_navbar_fitwidth jeg_navbar_normal">
+            <div class="container">
+                <div class="jeg_nav_row">
+                    <div class="jeg_nav_col jeg_nav_left jeg_nav_normal">
+                        <div class="item_wrap jeg_nav_alignleft"></div>
+                    </div>
+                    <div class="jeg_nav_col jeg_nav_center jeg_nav_grow">
+                        <div class="item_wrap jeg_nav_aligncenter">
+                            <div class="jeg_nav_item jeg_main_menu_wrapper">
+                                <div class="jeg_mainmenu_wrap">
+                                    <ul class="jeg_menu jeg_main_menu jeg_menu_style_5" data-animation="animate">
+                                        <li id="menu-item-49"
+                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-44 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-49 bgnav"
+                                            data-item-row="default"><a href="{% url 'index' %}">Home</a>
+                                         
+                                        </li>
+                                        <li id="menu-item-87"
+                                            class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-87 bgnav"
+                                            data-item-row="default"><a href="{% url 'category' 'World' %}" title="World">World</a></li>
+                                        <li id="menu-item-85"
+                                            class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-85 bgnav"
+                                            data-item-row="default"><a href="{% url 'category' 'Politics' %}" title="Politics">Politics</a></li>
+                                        <li id="menu-item-84"
+                                            class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-84 bgnav"
+                                            data-item-row="default"><a href="{% url 'category' 'Business' %}" title="Business">Business</a></li>
+                                        <li id="menu-item-86"
+                                            class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-86 bgnav"
+                                            data-item-row="default"><a href="{% url 'category' 'Science' %}" title="Science"> Science</a></li>
+                                        <li id="menu-item-56"
+                                            class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-56 bgnav jeg_megamenu category_2 ajaxload"
+                                            data-number="3" data-category="12" data-tags="32,31,23,30,27,29,28"
+                                            data-item-row="default"><a href="{% url 'category' 'Tech' %}" title="Tech">Tech</a>
+                                            <div class="sub-menu">
+                                                <div class="jeg_newsfeed style2 clearfix">
+                                                    <div class="newsfeed_overlay">
+                                                        <div class="preloader_type preloader_circle">
+                                                            <div class="newsfeed_preloader jeg_preloader dot">
+                                                                <span></span><span></span><span></span></div>
+                                                            <div class="newsfeed_preloader jeg_preloader circle">
+                                                                <div class="jnews_preloader_circle_outer">
+                                                                    <div class="jnews_preloader_circle_inner">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="newsfeed_preloader jeg_preloader square">
+                                                                <div class="jeg_square">
+                                                                    <div class="jeg_square_inner"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li id="menu-item-57"
+                                            class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-57 bgnav jeg_megamenu category_1 ajaxload"
+                                            data-number="10" data-category="17" data-tags=""
+                                            data-item-row="default"><a href="{% url 'category' 'Entertainment' %}" title="Entertainment">Entertainment</a>
+                                            <div class="sub-menu">
+                                                <div class="jeg_newsfeed clearfix">
+                                                    <div class="newsfeed_overlay">
+                                                        <div class="preloader_type preloader_circle">
+                                                            <div class="newsfeed_preloader jeg_preloader dot">
+                                                                <span></span><span></span><span></span></div>
+                                                            <div class="newsfeed_preloader jeg_preloader circle">
+                                                                <div class="jnews_preloader_circle_outer">
+                                                                    <div class="jnews_preloader_circle_inner">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="newsfeed_preloader jeg_preloader square">
+                                                                <div class="jeg_square">
+                                                                    <div class="jeg_square_inner"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li id="menu-item-58"
+                                            class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-58 bgnav jeg_megamenu category_2 ajaxload"
+                                            data-number="3" data-category="7" data-tags="27,28,29,31,30"
+                                            data-item-row="default"><a href="{% url 'category' 'Lifestyle' %}" title="Lifestyle">Lifestyle</a>
+                                            <div class="sub-menu">
+                                                <div class="jeg_newsfeed style2 clearfix">
+                                                    <div class="newsfeed_overlay">
+                                                        <div class="preloader_type preloader_circle">
+                                                            <div class="newsfeed_preloader jeg_preloader dot">
+                                                                <span></span><span></span><span></span></div>
+                                                            <div class="newsfeed_preloader jeg_preloader circle">
+                                                                <div class="jnews_preloader_circle_outer">
+                                                                    <div class="jnews_preloader_circle_inner">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="newsfeed_preloader jeg_preloader square">
+                                                                <div class="jeg_square">
+                                                                    <div class="jeg_square_inner"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+         
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="jeg_header_sticky">
+    <div class="sticky_blankspace"></div>
+    <div class="jeg_header normal">
+        <div class="jeg_container">
+            <div data-mode="scroll"
+                class="jeg_stickybar jeg_navbar jeg_navbar_wrapper  jeg_navbar_fitwidth jeg_navbar_normal">
+                <div class="container">
+                    <div class="jeg_nav_row">
+                        <div class="jeg_nav_col jeg_nav_left jeg_nav_normal">
+                            <div class="item_wrap jeg_nav_alignleft"></div>
+                        </div>
+                        <div class="jeg_nav_col jeg_nav_center jeg_nav_grow">
+                            <div class="item_wrap jeg_nav_aligncenter">
+                                <div class="jeg_nav_item jeg_main_menu_wrapper">
+                                    <div class="jeg_mainmenu_wrap">
+                                        <ul class="jeg_menu jeg_main_menu jeg_menu_style_5"
+                                            data-animation="animate">
+                                            <li id="menu-item-49"
+                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-44 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-49 bgnav"
+                                                data-item-row="default"><a href="{% url 'index' %}">Home</a>
+                                                
+                                            </li>
+                                            <li id="menu-item-87"
+                                                class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-87 bgnav"
+                                                data-item-row="default"><a href="{% url 'category' 'World' %}" title="World">World</a></li>
+                                            <li id="menu-item-85"
+                                                class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-85 bgnav"
+                                                data-item-row="default"><a href="{% url 'category' 'Politics' %}" title="Politics">Politics</a>
+                                            </li>
+                                            <li id="menu-item-84"
+                                                class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-84 bgnav"
+                                                data-item-row="default"><a href="{% url 'category' 'Business' %}" title="Business">Business</a>
+                                            </li>
+                                            <li id="menu-item-86"
+                                                class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-86 bgnav"
+                                                data-item-row="default"><a href="{% url 'category' 'Science' %}" title="Science">Science</a></li>
+                                            <li id="menu-item-56"
+                                                class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-56 bgnav jeg_megamenu category_2 ajaxload"
+                                                data-number="3" data-category="12" data-tags="32,31,23,30,27,29,28"
+                                                data-item-row="default"><a href="{% url 'category' 'Tech' %}" title="Tech">Tech</a>
+                                                <div class="sub-menu">
+                                                    <div class="jeg_newsfeed style2 clearfix">
+                                                        <div class="newsfeed_overlay">
+                                                            <div class="preloader_type preloader_circle">
+                                                                <div class="newsfeed_preloader jeg_preloader dot">
+                                                                    <span></span><span></span><span></span>
+                                                                </div>
+                                                                <div
+                                                                    class="newsfeed_preloader jeg_preloader circle">
+                                                                    <div class="jnews_preloader_circle_outer">
+                                                                        <div class="jnews_preloader_circle_inner">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div
+                                                                    class="newsfeed_preloader jeg_preloader square">
+                                                                    <div class="jeg_square">
+                                                                        <div class="jeg_square_inner"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li id="menu-item-57"
+                                                class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-57 bgnav jeg_megamenu category_1 ajaxload"
+                                                data-number="10" data-category="17" data-tags=""
+                                                data-item-row="default"><a
+                                                    href="{% url 'category' 'Entertainment' %}" title="Entertainment">Entertainment</a>
+                                                <div class="sub-menu">
+                                                    <div class="jeg_newsfeed clearfix">
+                                                        <div class="newsfeed_overlay">
+                                                            <div class="preloader_type preloader_circle">
+                                                                <div class="newsfeed_preloader jeg_preloader dot">
+                                                                    <span></span><span></span><span></span>
+                                                                </div>
+                                                                <div
+                                                                    class="newsfeed_preloader jeg_preloader circle">
+                                                                    <div class="jnews_preloader_circle_outer">
+                                                                        <div class="jnews_preloader_circle_inner">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div
+                                                                    class="newsfeed_preloader jeg_preloader square">
+                                                                    <div class="jeg_square">
+                                                                        <div class="jeg_square_inner"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li id="menu-item-58"
+                                                class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-58 bgnav jeg_megamenu category_2 ajaxload"
+                                                data-number="3" data-category="7" data-tags="27,28,29,31,30"
+                                                data-item-row="default"><a href="{% url 'category' 'Lifestle' %}" title="Lifestyle">Lifestyle</a>
+                                                <div class="sub-menu">
+                                                    <div class="jeg_newsfeed style2 clearfix">
+                                                        <div class="newsfeed_overlay">
+                                                            <div class="preloader_type preloader_circle">
+                                                                <div class="newsfeed_preloader jeg_preloader dot">
+                                                                    <span></span><span></span><span></span>
+                                                                </div>
+                                                                <div
+                                                                    class="newsfeed_preloader jeg_preloader circle">
+                                                                    <div class="jnews_preloader_circle_outer">
+                                                                        <div class="jnews_preloader_circle_inner">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div
+                                                                    class="newsfeed_preloader jeg_preloader square">
+                                                                    <div class="jeg_square">
+                                                                        <div class="jeg_square_inner"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="jeg_nav_col jeg_nav_right jeg_nav_normal">
+                            <div class="item_wrap jeg_nav_alignright">
+                                <div class="jeg_nav_item jeg_search_wrapper search_icon jeg_search_popup_expand">
+                                    <a href="#" class="jeg_search_toggle"><i class="fa fa-search"></i></a>
+                                    <form action="https://jnews.io/newspaper/" method="get" class="jeg_search_form"
+                                        target="_top"> <input name="s" class="jeg_search_input"
+                                            placeholder="Search..." type="text" value="" autocomplete="off"> <button
+                                            aria-label="Search Button" type="submit"
+                                            class="jeg_search_button btn"><i class="fa fa-search"></i></button>
+                                    </form>
+                                    <div class="jeg_search_result jeg_search_hide with_result">
+                                        <div class="search-result-wrapper"></div>
+                                        <div class="search-link search-noresult"> No Result</div>
+                                        <div class="search-link search-all-button"> <i class="fa fa-search"></i>
+                                            View All Result</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="jeg_navbar_mobile_wrapper">
+    <div class="jeg_navbar_mobile" data-mode="scroll">
+        <div class="jeg_mobile_bottombar jeg_mobile_midbar jeg_container normal">
+            <div class="container">
+                <div class="jeg_nav_row">
+                    <div class="jeg_nav_col jeg_nav_left jeg_nav_normal">
+                        <div class="item_wrap jeg_nav_alignleft">
+                            <div class="jeg_nav_item"> <a href="#" class="toggle_btn jeg_mobile_toggle"><i
+                                       id="toggleNav" class="fa fa-bars"></i></a></div>
+                        </div>
+                    </div>
+                    <div class="jeg_nav_col jeg_nav_center jeg_nav_grow">
+                        <div class="item_wrap jeg_nav_aligncenter">
+                            <div class="jeg_nav_item jeg_mobile_logo">
+                                <div class="site-title"> <a href="{% url 'index' %}"> <img style="height: unset; max-height: unset;" class="jeg_logo_img"
+                                            src="{% static 'frontend/images/main_logo.png' %}"
+                                            srcset="{% static 'frontend/images/main_logo.png' %} 1x, {% static 'frontend/images/main_logo.png' %} 2x"
+                                            alt="ZerosFeed"
+                                            data-light-src="{% static 'frontend/images/main_logo.png' %}"
+                                            data-light-srcset="{% static 'frontend/images/main_logo.png' %} 1x, {% static 'frontend/images/main_logo.png' %} 2x"
+                                            data-dark-src="{% static 'frontend/images/main_logo.png' %}"
+                                            data-dark-srcset="{% static 'frontend/images/main_logo.png' %} 1x, {% static 'frontend/images/main_logo.png' %} 2x">
+                                    </a></div>
+                            </div>
+                        </div>
+                    </div>
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sticky_blankspace" style="height: 60px;"></div>
+</div>

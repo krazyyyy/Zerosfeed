@@ -1,0 +1,132 @@
+<div class="footer-holder" id="footer" data-id="footer">
+    <div class="jeg_footer jeg_footer_2 normal">
+        <div class="jeg_footer_container jeg_container">
+            <div class="jeg_footer_content">
+                <div class="container">
+                    <div class="row">
+                        <div class="jeg_footer_primary clearfix">
+                            <div class="col-lg-4 col-md-3 footer_column">
+                                <div class="footer_widget widget_mc4wp_form_widget" id="mc4wp_form_widget-2">
+                                    <div class="jeg_footer_heading jeg_footer_heading_1">
+                                        <h3 class="jeg_footer_title"><span>Newsletter</span></h3>
+                                    </div>
+
+                                    <form id="mc4wp-form-1" class="mc4wp-form mc4wp-form-113" method="post"
+                                        data-id="113" data-name="Newsletter">
+                                        <div class="mc4wp-form-fields">
+                                            <h3>THE MOST IMPORTANT WORLD NEWS AND EVENTS OF THE DAY</h3>
+                                            <p>Subscribe to our mailing list to receives daily updates direct to
+                                                your inbox!</p>
+                                            <p><input type="email" name="EMAIL" placeholder="Your email address"
+                                                    required><input type="submit" value="Sign up"></p>
+                                        </div><label style="display: none !important;">Leave this field empty if
+                                            you're human: <input type="text" name="_mc4wp_honeypot" value=""
+                                                tabindex="-1" autocomplete="off"></label><input type="hidden"
+                                            name="_mc4wp_timestamp" value="1638762027"><input type="hidden"
+                                            name="_mc4wp_form_id" value="113"><input type="hidden"
+                                            name="_mc4wp_form_element_id" value="mc4wp-form-1">
+                                        <div class="mc4wp-response"></div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-md-3 footer_column">
+                                <div class="footer_widget widget_categories" id="categories-3">
+                                    <div class="jeg_footer_heading jeg_footer_heading_1">
+                                        <h3 class="jeg_footer_title"><span>Category</span></h3>
+                                    </div>
+                                    <ul>
+                                        <li class="cat-item cat-item-3"><a href="{% url 'category' 'Business' %}"
+                                                title="Business">Business</a>
+                                        </li>
+                                        <li class="cat-item cat-item-17"><a href="{% url 'category' 'Entertainment' %}"
+                                                title="Entertainment">Entertainment</a>
+                                        </li>
+                                        <li class="cat-item cat-item-8"><a href="{% url 'category' 'Fashion' %}"
+                                                title="Fashion">Fashion</a>
+                                        </li>
+                                        <li class="cat-item cat-item-10"><a href="{% url 'category' 'Food' %}"
+                                                title="Food">Food</a>
+                                        </li>
+                                        <li class="cat-item cat-item-18"><a href="{% url 'category' 'Gaming' %}"
+                                                title="Gaming">Gaming</a>
+                                        </li>
+                                        <li class="cat-item cat-item-11"><a href="{% url 'category' 'Health' %}"
+                                                title="Health.">Health</a>
+                                        </li>
+                                        <li class="cat-item cat-item-7"><a href="{% url 'category' 'Lifestyle' %}"
+                                                title="{% url 'category' 'Lifestyle' %}">Lifestyle</a>
+                                        </li>
+                                        <li class="cat-item cat-item-19"><a href="{% url 'category' 'Movies' %}"
+                                                title="Movies">Movies</a>
+                                        </li>
+                                        <li class="cat-item cat-item-4"><a href="{% url 'category' 'Politics' %}"
+                                                title="Politics">Politics</a>
+                                        </li>
+                                        <li class="cat-item cat-item-5"><a href="{% url 'category' 'Science' %}"
+                                                title="Science">Science</a>
+                                        </li>
+                                        <li class="cat-item cat-item-21"><a href="{% url 'category' 'Sports' %}"
+                                                title="Sports">Sports</a>
+                                        </li>
+                                        <li class="cat-item cat-item-12"><a href="{% url 'category' 'Tech' %}"
+                                                title="Tech">Tech</a>
+                                        </li>
+                                        <li class="cat-item cat-item-9"><a href="{% url 'category' 'Travel' %}"
+                                                title="Travel">Travel</a>
+                                        </li>
+                                        <li class="cat-item cat-item-6"><a href="{% url 'category' 'World' %}"
+                                                title="{% url 'category' 'Business' %}">World</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-3 footer_column">
+                                <div class="footer_widget widget_meta" id="meta-3">
+                                    <div class="jeg_footer_heading jeg_footer_heading_1">
+                                        <h3 class="jeg_footer_title"><span>Sources</span></h3>
+                                    </div>
+                                    <ul id="source_footer">
+                                        
+                                    </ul>
+                                    <script>
+                                        fetch('/rss/randomSources')
+                                        .then(response => response.json())
+                                        .then(data => {
+                                            info = data['feed']
+                                            footer = document.querySelector("#source_footer")
+                                            for (var i = 0; i < info.length; i ++ ) {
+                                                footer.innerHTML += `
+                                                <li><a href="/source/${info[i]}">${info[i]}</a></li>
+                                                `
+                                            }
+                                        })
+                                    </script>
+                                </div>
+                            </div>
+                            <div class="col-md-3 footer_column">
+                                <div class="footer_widget widget_jnews_about" id="jnews_about-2">
+                                    <div class="jeg_footer_heading jeg_footer_heading_1">
+                                        <h3 class="jeg_footer_title"><span>About Us</span></h3>
+                                    </div>
+                                    <div class="jeg_about ">
+                                        <p>All news in one place! Your first step into the online world is now easier than ever before!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="jeg_footer_secondary clearfix" style="text-align: center;">
+                        
+                        <p class="copyright"> © 2021 <a href="https://developerspoints.com"
+                                title="Developed &amp; Powered By Developers Points">DevelopersPoints</a> - 
+                            Developed &amp; Powered by <a href="https://developerspoints.com"
+                                title="DevelopersPoints">DevelopersPoints</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="jscroll-to-top"> <a href="#back-to-top" class="jscroll-to-top_link"><i class="fa fa-angle-up"></i></a>
+</div>
