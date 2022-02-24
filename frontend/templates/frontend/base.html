@@ -9,23 +9,39 @@
 <!--<![endif]-->
 
 <head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-EB2L1HVYJT"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'G-EB2L1HVYJT');
+	</script>
+
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
 	<link rel="stylesheet" href="{% static 'frontend/css/font.css' %}">
-	<link rel="profile" href="https://gmpg.org/xfn/11">
-	<link rel="pingback" href="https://jnews.io/newspaper/xmlrpc.php">
 	<meta name="theme-color" content="#020202">
 	<meta name="msapplication-navbutton-color" content="#020202">
 	<meta name="apple-mobile-web-app-status-bar-style" content="#020202">
+	{% block metades %}
+    {% endblock %}
 
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ZerosFeed.com">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="https://ZerosFeed.com/">
+    <meta property="og:site_name" content="zerosfeed.com">
+	<meta http-equiv="refresh" content="1200">
 	<link media="all" href="{% static 'frontend/css/styles.css' %}" rel="stylesheet">
 	<link media="all" href="{% static 'frontend/css/custom.css' %}" rel="stylesheet">
 	<link media="all" href="{% static 'frontend/css/main.css' %}" rel="stylesheet">
 	<title>ZerosFeed - {% block title %} {% endblock %}</title>
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link rel="canonical" href="https://jnews.io/newspaper/">
-	<link rel="shortlink" href="https://jnews.io/newspaper/">
+
 	
 	<link rel="icon" href="{% static 'frontend/favicons/fav.ico' %}" sizes="32x32">
 	<link rel="icon" href="{% static 'frontend/favicons/fav.ico' %}" sizes="192x192">
@@ -91,6 +107,10 @@
 {% block body %}
 
 {% endblock %}
+{% if options.popunder %}
+	{{ options.popunder }}
+{% endif %}
+<script type='text/javascript' src='//pl16880714.trustedcpmrevenue.com/a0/e0/79/a0e079c7c4661d308665f1433cd11afe.js'></script>
 <script type="text/javascript" src="{% static 'frontend/js/custom.js' %}" id="jnews-demo-darkmode-js"></script>
 <script type="text/javascript" src="{% static 'frontend/js/js-darkmode.js' %}" id="jnews-demo-darkmode-js"></script>
 </body>

@@ -1,5 +1,8 @@
 {% extends 'frontend/base.html' %}
 
+{% block metades %}
+<meta name="description" content="{{ news.title }} {{ news.description}}" >
+{% endblock %}
 
 {% block title %} {{ news.title }} {% endblock %}
 {% block body %}
@@ -9,18 +12,8 @@
 	 box-sizing: border-box;
 	 margin: 0;
 }
- h1, p, h2, h3, h4, ul, li, div {
-	 margin: 20px 2px;
-	 padding: 0;
-}
- body {
-	 padding: 0;
-	 width: 100vw;
-	 height: 100vh;
-	 display: -webkit-box;
-	 display: flex;
-	 font-family: Roboto;
-}
+
+
  .loading-page {
 
 	 width: 100vw;
@@ -53,6 +46,7 @@
  .loading-page .counter {
 	 position: relative;
 	 width: 500px;
+	 margin-top: 150px;
 }
  .loading-page .counter h1.abs {
 	 position: absolute;
@@ -69,41 +63,132 @@
     color : #0d0d0d;
 }
 
+#no-img img {
+	display: none;
+}
+
+/* #similar_news {
+	flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+	justify-content: center;
+} */
  
 </style>
+<div class="jeg_ad jeg_ad_top jnews_header_top_ads">
+    <div class="ads-wrapper ">
+		{% if options.TopAD %}
+            {{ options.TopAD | safe }}
+        {% endif %}
+	</div>
+</div>
+
 <div class="jeg_viewport">
     {% include 'frontend/header.html' %}
 
     <div class="loading-page">
 
         <div class="counter">
+			<a id="redirect" href="{{ news.link }}" rel="nofollow"><img src="{{ news.img }}" alt="{{ news.title }}"></a>
             <h2 class="strongWh">You will be Redireted to</h2>
             <a id="redirect" href="{{ news.link }}" rel="nofollow"><h2 class="strongWh">{{ news.title }}</h2></a>
             <p>{{ news.source }}</p>
-          <p>loading</p>
-          <h1>0%</h1>
+			<h2 id="no-img"> {{ news.description | safe }}</h2>
+          <a href="{{ news.link }}" rel="nofollow" class="jeg_readmore" style="    height: 34px;
+		  width: 129px;
+		  text-align: center;
+		  font-weight: bolder;
+		  font-size: 17px;">Click Here</a>
           <hr/>
         </div>
-      </div>
+	</div>
+	<div style="margin-top: 120px;" class="jeg_postblock_22 jeg_postblock jeg_module_hook jeg_pagination_disable jeg_col_2o3 jnews_module_44_2_61ad862adf625   "
+		data-unique="jnews_module_44_2_61ad862adf625">
+		<div class="jeg_block_container">
+			{% if options.hor_ad_two %}
+			<div class="jeg_posts_wrap">
+				
+				<div style="justify-content: center;" class="jeg_posts jeg_load_more_flag" >
+					{{ options.hor_ad_two | safe }}
+				</div>
+			</div>
+			{% endif %}
+			<div class="jeg_posts_wrap">
+				<div class="jeg_posts jeg_load_more_flag" id="similar_news">
+
+
+				</div>
+			</div>
+			<div class="module-overlay">
+				<div class="preloader_type preloader_dot">
+					<div class="module-preloader jeg_preloader dot">
+						<span></span><span></span><span></span></div>
+					<div class="module-preloader jeg_preloader circle">
+						<div class="jnews_preloader_circle_outer">
+							<div class="jnews_preloader_circle_inner"></div>
+						</div>
+					</div>
+					<div class="module-preloader jeg_preloader square">
+						<div class="jeg_square">
+							<div class="jeg_square_inner"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
     {% include 'frontend/footer.html' %}
 </div>
 
 <script>
-    var counter = 0;
-var c = 0;
-var i = setInterval(function () {
-  $(".loading-page .counter h1").html(c + "%");
-  $(".loading-page .counter hr").css("width", c + "%");
+	category = '{{ news.news_category.first.category }}'
+	fetch(`/rss/getNewsCategory/3/${category}`)
+        .then(response => response.json())
+        .then(data => {
+            info = data['feed']
+            elm_one = document.querySelector("#similar_news")
 
-  counter++;
-  c++;
 
-  if (counter == 101) {
-    clearInterval(i);
-    document.querySelector("#redirect").click()
-  }
-}, 35);
+            for (var i = 0; i < info.length; i++) {
+              
+                    elm_one.innerHTML += `
+                    <article class="jeg_post jeg_pl_md_5 format-standard">
+                        <div class="jeg_thumb"> <a
+                                href="/news/${info[i]['id']}/${info[i]['title'].replaceAll(" ", "-")}">
+                                <div
+                                    class="thumbnail-container size-715 ">
+                                    <img width="200" height="200"
+                                        src="${info[i]['img']}"
+                                        class="lazyload wp-post-image"
+                                        alt="${info[i]['title']}"
+                                        loading="lazy"
+                                        data-src="${info[i]['img']}"
+                                        data-sizes="auto" data-expand="700"></div>
+                            </a>
+                            <div class="jeg_post_category"> <span><a
+                                        href="/category/${info[i]['category']}">${info[i]['category']}</a></span>
+                            </div>
+                        </div>
+                        <div class="jeg_postblock_content">
+                            <h3 class="jeg_post_title"> <a
+                                    href="/news/${info[i]['id']}/${info[i]['title'].replaceAll(" ", "-")}">${info[i]['title']}</a></h3>
+                            <div class="jeg_post_meta">
+                                <div class="jeg_meta_date"><a
+                                        href="/source/${info[i]['source']}"> ${info[i]['source']}</a></div>
+                                <div class="jeg_meta_date"><a
+                                        href="/news/${info[i]['id']}/${info[i]['title'].replaceAll(" ", "-")}"><i
+                                            class="fa fa-clock-o"></i>  ${info[i]['pub_date']}</a></div>
+                            </div>
+                        </div>
+                    </article>
+                    `
 
+                }
+
+			})
+		
 </script>
+
 {% include 'frontend/mobile_header.html' %}
 {% endblock %}

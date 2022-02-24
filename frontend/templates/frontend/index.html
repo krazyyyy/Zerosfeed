@@ -1,10 +1,18 @@
 {% extends 'frontend/base.html' %}
 
+{% block metades %}
+    <meta name="description" content="ZerosFeed | All news in one place! Your first step into the online world is now easier than ever before!"> 
+{% endblock %}
 
 {% block title %} Home {% endblock %}
 {% block body %}
 <div class="jeg_ad jeg_ad_top jnews_header_top_ads">
-    <div class="ads-wrapper "></div>
+    <div class="ads-wrapper ">
+        {% if options.TopAD %}
+            {{ options.TopAD | safe }}
+        {% endif %}
+
+    </div>
 </div>
 <div class="jeg_viewport">
     {% include 'frontend/header.html' %}

@@ -40,7 +40,11 @@ class ADsCode(models.Model):
     home_ad_side = models.TextField(null=True, blank=True,  help_text="Scroll Top Banner")
     
     hor_ad_one = models.TextField(null=True, blank=True,  help_text="Between Top and Biznis")
-    hor_ad_two = models.TextField(null=True, blank=True, help_text="Between TEHNOLOGIJA and Sports")
+    hor_ad_two = models.TextField(null=True, blank=True, help_text="Native Banner AD")
+    TopAD = models.TextField(null=True, blank=True, help_text="Top Of the PAGE")
+    sideAD = models.TextField(null=True, blank=True, help_text="Side Of the PAGE")
+    popunder = models.TextField(null=True, blank=True)
+
     access_name = models.CharField(max_length=32, default="admin")
 
 

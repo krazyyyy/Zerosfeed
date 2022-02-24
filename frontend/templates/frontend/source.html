@@ -1,10 +1,12 @@
 {% extends 'frontend/base.html' %}
 
-
+{% block metades %}
+    <meta name="description" content="ZerosFeed | {{ main_item }} | All news in one place! Your first step into the online world is now easier than ever before!"> 
+{% endblock %}
 {% block title %} {{ main_item }} {% endblock %}
 {% block body %}
 <div class="jeg_ad jeg_ad_top jnews_header_top_ads">
-    <div class="ads-wrapper ">{{ options.hor_ad_two | safe }}</div>
+    <div class="ads-wrapper ">{{ options.TopAD | safe }}</div>
 </div>
 <div class="jeg_viewport">
     {% include 'frontend/header.html' %}
@@ -158,6 +160,19 @@
                                 <div class="jeg_ad jeg_ad_module jnews_module_44_6_61ad862ae744b   ">
                                     {% if options.home_ad_side %}
                                         {{ options.home_ad_side | safe }}
+                                    {% else %}
+                                    <div class="ads-wrapper"><a href="#" target="_blank"
+                                            rel="nofollow noopener" class="adlink ads_image "> <img
+                                                src="images/gif;base64,R0lGODlhAQABAIAAAP-wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                                                class="lazyload"
+                                                data-src="https://jnews.io/newspaper/wp-content/uploads/sites/21/2017/06/ad_300x600.jpg"
+                                                alt="Advertisement Banner" data-pin-no-hover="true">
+                                        </a></div>
+                                    {% endif %}
+                                </div>
+                                <div class="jeg_ad jeg_ad_module jnews_module_44_6_61ad862ae744b   ">
+                                    {% if options.sideAD %}
+                                        {{ options.sideAD | safe }}
                                     {% else %}
                                     <div class="ads-wrapper"><a href="#" target="_blank"
                                             rel="nofollow noopener" class="adlink ads_image "> <img
